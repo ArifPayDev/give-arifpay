@@ -1,0 +1,12 @@
+{
+  "name": "give-arifpay",
+  "private": true,
+  "scripts": {
+    "dev": "mix",
+    "watch": "mix watch",
+    "build": "mix --production"
+  },
+  "dependencies": {
+    "laravel-mix": "^6.0.49"
+  }
+}

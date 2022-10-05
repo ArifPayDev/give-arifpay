@@ -1,0 +1,15 @@
+{
+    "name": "arifpay/arifpay-givewp",
+    "description": "Process online donations via the Arifpay payment gateway.",
+    "type": "wordpress-plugin",
+    "require": {
+        "arifpay/phpsdk": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Basliel Selamu",
+            "email": "baslielselamu2018@gmail.com"
+        }
+    ]
+}

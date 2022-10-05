@@ -1,0 +1,197 @@
+# Copyright (C) 2021 Give-Arifpay
+# This file is distributed under the same license as the Give-Arifpay package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Give-Arifpay\n"
+"Report-Msgid-Bugs-To: https://github.com/impress-org/give-arifpay/issues/new\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Language-Team: GiveWP <info@givewp.com>\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: give-paymoney.php:220
+msgid "<strong>Activation Error:</strong> You must have the <a href=\"%s\" target=\"_blank\">Give</a> plugin installed and activated for Give - Arifpay to activate."
+msgstr ""
+
+#: give-paymoney.php:248
+msgid "<strong>Activation Error:</strong> You must have the <a href=\"%1$s\" target=\"_blank\">Give</a> core version %2$s for the Give - Arifpay add-on to activate."
+msgstr ""
+
+#: give-paymoney.php:323
+msgid "Arifpay Gateway"
+msgstr ""
+
+#: includes/actions.php:42
+msgid "Phone"
+msgstr ""
+
+#: includes/actions.php:45
+msgid "Enter only phone number."
+msgstr ""
+
+#: includes/actions.php:116
+msgid "The currency must be set as \"Indian Rupee (₹)\" within Give's <a href=\"%s\">Currency Settings</a> in order to collect donations through the Arifpay Payment Gateway."
+msgstr ""
+
+#: includes/admin/actions.php:57
+msgid "Phone:"
+msgstr ""
+
+#: includes/admin/admin-settings.php:57, includes/functions.php:30
+msgid "Arifpay"
+msgstr ""
+
+#: includes/admin/admin-settings.php:83
+msgid "Arifpay - India"
+msgstr ""
+
+#: includes/admin/admin-settings.php:85
+msgid "Only INR currency is supported by Arifpay. Hence, the Indian Arifpay accounts are only supported."
+msgstr ""
+
+#: includes/admin/admin-settings.php:125
+msgid "Account"
+msgstr ""
+
+#: includes/admin/admin-settings.php:129
+msgid "Arifpay"
+msgstr ""
+
+#: includes/admin/admin-settings.php:130
+msgid "PayUBiz"
+msgstr ""
+
+#: includes/admin/admin-settings.php:133
+msgid "This option will help you select the account you're using for PayUIndia to accept donations."
+msgstr ""
+
+#: includes/admin/admin-settings.php:136
+msgid "Live Merchant Key"
+msgstr ""
+
+#: includes/admin/admin-settings.php:139
+msgid "The LIVE Merchant ID provided by arifpay. Required for testing donation payments in LIVE mode."
+msgstr ""
+
+#: includes/admin/admin-settings.php:142
+msgid "Live Merchant Salt"
+msgstr ""
+
+#: includes/admin/admin-settings.php:145
+msgid "The LIVE Merchant Salt provided by arifpay. Required for testing donation payments in LIVE mode."
+msgstr ""
+
+#: includes/admin/admin-settings.php:148
+msgid "Sandbox Merchant Key"
+msgstr ""
+
+#: includes/admin/admin-settings.php:151
+msgid "The TEST Merchant Key provided by arifpay. Required for testing donation payments in TEST mode."
+msgstr ""
+
+#: includes/admin/admin-settings.php:154
+msgid "Sandbox Merchant Salt"
+msgstr ""
+
+#: includes/admin/admin-settings.php:157
+msgid "The TEST Merchant Salt provided by arifpay. Required for testing donation payments in TEST mode."
+msgstr ""
+
+#: includes/admin/admin-settings.php:160
+msgid "Collect Billing Details"
+msgstr ""
+
+#: includes/admin/admin-settings.php:164, includes/admin/admin-settings.php:177
+msgid "Enabled"
+msgstr ""
+
+#: includes/admin/admin-settings.php:165, includes/admin/admin-settings.php:178
+msgid "Disabled"
+msgstr ""
+
+#: includes/admin/admin-settings.php:168
+msgid "This option will enable the billing details section for Arifpay which requires the donor's address to complete the donation. These fields are not required by Arifpay to process the transaction, but you may have the need to collect the data."
+msgstr ""
+
+#: includes/admin/admin-settings.php:171
+msgid "Show Phone Field"
+msgstr ""
+
+#: includes/admin/admin-settings.php:174
+msgid "This setting will display a phone number field on the donation form (NOTE: this field is necessary for Arifpay)."
+msgstr ""
+
+#: includes/admin/plugin-activation.php:20
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/plugin-activation.php:55
+msgid "Documentation"
+msgstr ""
+
+#: includes/admin/plugin-activation.php:65
+msgid "Add-ons"
+msgstr ""
+
+#: includes/filters.php:8
+msgid "Please enter valid phone number without zero"
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:194
+msgid "This is a donation payment for %s"
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:271
+msgid "Arifpay payment completed (Transaction id: %s)"
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:293
+msgid "Arifpay payment failed (Transaction id: %s)"
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:301, includes/lib/class-give-arifpay-api.php:329
+msgid "Arifpay Error"
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:302, includes/lib/class-give-arifpay-api.php:330
+msgid "The Arifpay Gateway returned an error while charging a donation."
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:302, includes/lib/class-give-arifpay-api.php:330
+msgid "Details: %s"
+msgstr ""
+
+#: includes/lib/class-give-arifpay-api.php:321
+msgid "Arifpay payment has \"%s\" status. Check the <a href=\"%s\" target=\"_blank\">Arifpay merchant dashboard</a> for more information or check the <a href=\"%s\" target=\"_blank\">payment gateway error logs</a> for additional details"
+msgstr ""
+
+#: includes/payment-processing.php:11
+msgid "Nonce verification has failed."
+msgstr ""
+
+#: includes/payment-processing.php:11
+msgid "Error"
+msgstr ""
+
+#: includes/payment-processing.php:41
+msgid "Payment Error"
+msgstr ""
+
+#: includes/payment-processing.php:44
+msgid "Payment creation failed before process Arifpay gateway. Payment data: %s"
+msgstr ""
+
+#: templates/form.php:10
+msgid "Process Donation with Arifpay payment gateways"
+msgstr ""
+
+#: templates/success.php:13
+msgid "Process Arifpay API Response"
+msgstr ""
