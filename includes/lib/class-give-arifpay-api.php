@@ -103,7 +103,7 @@ class Give_Arifpay_API
 				],
 			);
 
-			$session =  self::$arifpay->checkout->create($data, new ArifpayOptions(sandbox: self::$sandbox));
+			$session =  self::$arifpay->checkout->create($data, new ArifpayOptions(self::$sandbox));
 			return $session->payment_url;
 		} catch (Exception $e) {
 
