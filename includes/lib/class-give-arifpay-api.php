@@ -80,21 +80,21 @@ class Give_Arifpay_API
 		try {
 			$expired = "2055-01-13T17:09:42.411";
 			$data = new ArifpayCheckoutRequest(
-				cancel_url: $failed_url,
-				error_url: $failed_url,
-				notify_url: 'https://gateway.arifpay.net/test/callback',
-				expireDate: $expired,
-				nonce: $nonce,
-				beneficiaries: [
+				$failed_url,
+				$failed_url,
+				'https://gateway.arifpay.net/test/callback',
+				$expired,
+				$nonce,
+				[
 					ArifpayBeneficary::fromJson([
 						"accountNumber" => '01320811436100',
 						"bank" => 'AWINETAA',
 						"amount" => $amount,
 					]),
 				],
-				paymentMethods: [],
-				success_url: $success_url,
-				items: [
+				[],
+				$success_url,
+				[
 					ArifpayCheckoutItem::fromJson([
 						"name" => $name,
 						"price" => $amount,
