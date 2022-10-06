@@ -37,7 +37,7 @@ msgid "Enter only phone number."
 msgstr ""
 
 #: includes/actions.php:116
-msgid "The currency must be set as \"Indian Rupee (₹)\" within Give's <a href=\"%s\">Currency Settings</a> in order to collect donations through the Arifpay Payment Gateway."
+msgid "The currency must be set as \"Ethiopian Birr (Br)\" within Give's <a href=\"%s\">Currency Settings</a> in order to collect donations through the Arifpay Payment Gateway."
 msgstr ""
 
 #: includes/admin/actions.php:57
@@ -49,11 +49,11 @@ msgid "Arifpay"
 msgstr ""
 
 #: includes/admin/admin-settings.php:83
-msgid "Arifpay - India"
+msgid "Arifpay - Ethiopia"
 msgstr ""
 
 #: includes/admin/admin-settings.php:85
-msgid "Only INR currency is supported by Arifpay. Hence, the Indian Arifpay accounts are only supported."
+msgid "Only INR currency is supported by Arifpay. Hence, the Ethiopian birr is only supported."
 msgstr ""
 
 #: includes/admin/admin-settings.php:125
@@ -69,7 +69,7 @@ msgid "PayUBiz"
 msgstr ""
 
 #: includes/admin/admin-settings.php:133
-msgid "This option will help you select the account you're using for PayUIndia to accept donations."
+msgid "This option will help you select the account you're using for Arifpay to accept donations."
 msgstr ""
 
 #: includes/admin/admin-settings.php:136

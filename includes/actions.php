@@ -102,10 +102,10 @@ function give_arifpay_show_admin_notice() {
 		return;
 	}
 
-	// Show currency notice, if currency is not set as "Indian Rupee".
+	// Show currency notice, if currency is not set as "Ethiopian Birr".
 	if (
 		current_user_can( 'manage_give_settings' ) &&
-		'INR' !== give_get_currency() &&
+		'ETB' !== give_get_currency() &&
 		! class_exists( 'Give_Currency_Switcher' ) // Disable Notice, if Currency Switcher add-on is enabled.
 	) {
 		Give()->notices->register_notice( array(
@@ -113,7 +113,7 @@ function give_arifpay_show_admin_notice() {
 			'type'        => 'error',
 			'dismissible' => false,
 			'description' => sprintf(
-				__( 'The currency must be set as "Indian Rupee (₹)" within Give\'s <a href="%s">Currency Settings</a> in order to collect donations through the Arifpay Payment Gateway.', 'give-arifpay' ),
+				__( 'The currency must be set as "Ethiopian Birr (br)" within Give\'s <a href="%s">Currency Settings</a> in order to collect donations through the Arifpay Payment Gateway.', 'give-arifpay' ),
 				admin_url( 'edit.php?post_type=give_forms&page=give-settings&tab=general&section=currency-settings' )
 			),
 			'show'        => true,

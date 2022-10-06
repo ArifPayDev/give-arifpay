@@ -1,7 +1,4 @@
 <?php
-if (is_readable(__DIR__ . '/vendor/autoload.php')) {
-	require __DIR__ . '/vendor/autoload.php';
-}
 
 use Give\Views\Form\Templates\Sequoia\Sequoia;
 
@@ -77,38 +74,49 @@ class Give_Arifpay_API
 
 	public static function create_session($name, $amount, $nonce, $success_url, $failed_url, $notify_url, $donation_id)
 	{
+		$expired = "2023-02-01T03:45:27";
+		$data = new ArifpayCheckoutRequest(
+			$failed_url,
+			$nonce,
+			$failed_url,
+			'https://gateway.arifpay.net/test/callback',
+			$success_url,
+			["TELEBIRR"],
+			$expired,
+			[
+				ArifpayCheckoutItem::fromJson([
+					"name" => $name,
+					"price" => $amount,
+					"quantity" => 1,
+				]),
+			],
+			[
+				ArifpayBeneficary::fromJson([
+					"accountNumber" => '01320811436100',
+					"bank" => 'AWINETAA',
+					"amount" => $amount,
+				]),
+			],
+
+		);
 		try {
-			$expired = "2055-01-13T17:09:42.411";
-			$data = new ArifpayCheckoutRequest(
-				$failed_url,
-				$failed_url,
-				'https://gateway.arifpay.net/test/callback',
-				$expired,
-				$nonce,
-				[
-					ArifpayBeneficary::fromJson([
-						"accountNumber" => '01320811436100',
-						"bank" => 'AWINETAA',
-						"amount" => $amount,
-					]),
-				],
-				[],
-				$success_url,
-				[
-					ArifpayCheckoutItem::fromJson([
-						"name" => $name,
-						"price" => $amount,
-						"quantity" => 1,
-					]),
-				],
-			);
+
+
 
 			$session =  self::$arifpay->checkout->create($data, new ArifpayOptions(self::$sandbox));
 			return $session->payment_url;
 		} catch (Exception $e) {
 
+
 			error_log(
-				print_r($e->getMessage(), true) . "\n",
+				"Arifpay-give: Request " .
+					print_r($data, true) . "\n",
+				3,
+				WP_CONTENT_DIR . '/debug.log'
+			);
+			error_log(
+				"Arifpay-give: " .
+					print_r($e, true) . "\n",
 				3,
 				WP_CONTENT_DIR . '/debug.log'
 			);
@@ -118,6 +126,7 @@ class Give_Arifpay_API
 				esc_html__('The Arifpay Gateway returned an error while charging a donation.', 'give-arifpay') . '<br><br>' . sprintf(esc_attr__('Details: %s', 'give-arifpay'), '<br>' . print_r($e, true)),
 				$donation_id
 			);
+			return "https://developer.arifpay.net/docs/";
 		}
 	}
 
@@ -246,14 +255,18 @@ class Give_Arifpay_API
 		 */
 		$apaypaisa_args = apply_filters('give_arifpay_form_args', $apaypaisa_args);
 
+
 		// Create input hidden fields.
 		$payment_url = self::create_session($apaypaisa_args["title"], $apaypaisa_args["amount"], $apaypaisa_args["txnid"], $apaypaisa_args["surl"], $apaypaisa_args["furl"], $apaypaisa_args["nurl"], $donation_id);
+
 
 		ob_start();
 
 		/* @var Sequoia $sequoiaTemplateClass */
 		$sequoiaTemplateClass = give(Sequoia::class);
+
 ?>
+
 		<form action="<?php echo $payment_url; ?>" method="get" name="apayForm" style="display: none" <?php if ($sequoiaTemplateClass->getID() === Give\Helpers\Form\Template::getActiveID($form_id)) {
 																											echo 'target="_parent"';
 																										} ?>>
@@ -261,6 +274,7 @@ class Give_Arifpay_API
 			<input type="submit" value="Submit" />
 		</form>
 <?php
+
 		$form_html = ob_get_contents();
 		ob_get_clean();
 

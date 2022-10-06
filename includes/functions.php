@@ -89,7 +89,7 @@ function give_arifpay_get_api_url()
 }
 
 /**
- * This function will help you get the selected PayUIndia account by admin.
+ * This function will help you get the selected Arifpay account by admin.
  *
  * @since 1.0.4
  *

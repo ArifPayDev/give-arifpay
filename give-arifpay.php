@@ -98,7 +98,10 @@ if ( ! class_exists( 'Give_Arifpay_Gateway' ) ) {
 		 * @return Give_Arifpay_Gateway
 		 */
 		public function init() {
-
+			
+			if (is_readable(__DIR__ . '/vendor/autoload.php')) {
+				require __DIR__ . '/vendor/autoload.php';
+			}
 			if ( ! $this->get_environment_warning() ) {
 				return;
 			}
